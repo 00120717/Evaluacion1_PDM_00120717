@@ -35,16 +35,6 @@ public class ShareActivity extends AppCompatActivity {
         tv8 = findViewById(R.id.ps8);
         tv9 = findViewById(R.id.ps9);
 
-        p1 = Integer.parseInt(tv1.getText().toString());
-        p2 = Integer.parseInt(tv2.getText().toString());
-        p3 = Integer.parseInt(tv3.getText().toString());
-        p4 = Integer.parseInt(tv4.getText().toString());
-        p5 = Integer.parseInt(tv5.getText().toString());
-        p6 = Integer.parseInt(tv6.getText().toString());
-        p7 = Integer.parseInt(tv7.getText().toString());
-        p8 = Integer.parseInt(tv8.getText().toString());
-        p9 = Integer.parseInt(tv9.getText().toString());
-        total = p1+p2+p3+p4+p5+p6+p7+p8+p9;
 
         btn_share = findViewById(R.id.btn_share);
 
@@ -66,6 +56,19 @@ public class ShareActivity extends AppCompatActivity {
             tv7.setText(mIntent.getStringExtra(AppConstants.TEXTKEY_9));
             tv8.setText(mIntent.getStringExtra(AppConstants.TEXTKEY_10));
             tv9.setText(mIntent.getStringExtra(AppConstants.TEXTKEY_11));
+
+
+
+            p1 = Integer.parseInt(tv1.getText().toString());
+            p2 = Integer.parseInt(tv2.getText().toString());
+            p3 = Integer.parseInt(tv3.getText().toString());
+            p4 = Integer.parseInt(tv4.getText().toString());
+            p5 = Integer.parseInt(tv5.getText().toString());
+            p6 = Integer.parseInt(tv6.getText().toString());
+            p7 = Integer.parseInt(tv7.getText().toString());
+            p8 = Integer.parseInt(tv8.getText().toString());
+            p9 = Integer.parseInt(tv9.getText().toString());
+            total = p1+p2+p3+p4+p5+p6+p7+p8+p9;
 
             totalProd.setText(Integer.toString(total));
         }

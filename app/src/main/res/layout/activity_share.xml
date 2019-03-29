@@ -53,13 +53,14 @@
 
 
         <TextView
-            android:id="@+id/total_prod"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Total Producto:"
             android:textColor="@color/colorPrimaryDark"
             />
         <TextView
+            android:id="@+id/total_prod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="0"
