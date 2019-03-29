@@ -31,6 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         v7 = findViewById(R.id.vw7);
         v8 = findViewById(R.id.vw8);
         v9 = findViewById(R.id.vw9);
+        btn_send = findViewById(R.id.send);
+
+        user = findViewById(R.id.user);
+        email = findViewById(R.id.email);
 
         v1.setOnClickListener(this);
         v2.setOnClickListener(this);
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         v7.setOnClickListener(this);
         v8.setOnClickListener(this);
         v9.setOnClickListener(this);
+        btn_send.setOnClickListener(this);
 
         p1 = findViewById(R.id.p1);
         p2 = findViewById(R.id.p2);
@@ -52,9 +57,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         p8 = findViewById(R.id.p8);
         p9 = findViewById(R.id.p9);
 
-        user = findViewById(R.id.user);
-        email = findViewById(R.id.email);
-        btn_send = findViewById(R.id.send);
     }
 
     @Override
@@ -90,17 +92,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.send:
                 Intent mIntent = new Intent(MainActivity.this,ShareActivity.class);
                 mIntent.putExtra(AppConstants.TEXTKEY_1,user.getText());
-                mIntent.putExtra(AppConstants.TEXTKEY_2,user.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_2,email.getText());
 
-                mIntent.putExtra(AppConstants.TEXTKEY_3,p1.getText());
-                mIntent.putExtra(AppConstants.TEXTKEY_4,p2.getText());
-                mIntent.putExtra(AppConstants.TEXTKEY_5,p3.getText());
-                mIntent.putExtra(AppConstants.TEXTKEY_6,p4.getText());
-                mIntent.putExtra(AppConstants.TEXTKEY_7,p5.getText());
-                mIntent.putExtra(AppConstants.TEXTKEY_8,p6.getText());
-                mIntent.putExtra(AppConstants.TEXTKEY_9,p7.getText());
-                mIntent.putExtra(AppConstants.TEXTKEY_10,p8.getText());
-                mIntent.putExtra(AppConstants.TEXTKEY_11,p9.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_3,p1.getText().toString());
+                mIntent.putExtra(AppConstants.TEXTKEY_4,p2.getText().toString());
+                mIntent.putExtra(AppConstants.TEXTKEY_5,p3.getText().toString());
+                mIntent.putExtra(AppConstants.TEXTKEY_6,p4.getText().toString());
+                mIntent.putExtra(AppConstants.TEXTKEY_7,p5.getText().toString());
+                mIntent.putExtra(AppConstants.TEXTKEY_8,p6.getText().toString());
+                mIntent.putExtra(AppConstants.TEXTKEY_9,p7.getText().toString());
+                mIntent.putExtra(AppConstants.TEXTKEY_10,p8.getText().toString());
+                mIntent.putExtra(AppConstants.TEXTKEY_11,p9.getText().toString());
                 startActivity(mIntent);
         }
 
