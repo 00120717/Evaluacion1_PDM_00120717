@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ShareActivity">
 
     <LinearLayout
@@ -11,22 +12,25 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
+        android:padding="@dimen/default_gap"
         >
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="FACTURA"
             android:textColor="@color/black"
-            android:layout_gravity="center"
+            android:gravity="center"
             />
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Usuario:"
             android:textColor="@color/colorPrimaryDark"
             />
         <TextView
+            android:id="@+id/user_s"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="user"
@@ -40,6 +44,7 @@
             android:textColor="@color/colorPrimaryDark"
             />
         <TextView
+            android:id="@+id/email_s"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="email"
@@ -48,6 +53,7 @@
 
 
         <TextView
+            android:id="@+id/total_prod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Total Producto:"
@@ -63,7 +69,259 @@
     </LinearLayout>
 
     //GRID
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        >
+
+
+        <LinearLayout
+            android:id="@+id/vs1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_product"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto 1"
+                />
+            <TextView
+                android:id="@+id/ps1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vs2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_product"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto 2"
+                />
+            <TextView
+                android:id="@+id/ps2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vs3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_product"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto 3"
+                />
+            <TextView
+                android:id="@+id/ps3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    //Grid 2
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+        <LinearLayout
+            android:id="@+id/vs4"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_product"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto 4"
+                />
+            <TextView
+                android:id="@+id/ps4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vs5"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_product"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto 5"
+                />
+            <TextView
+                android:id="@+id/ps5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vs6"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_product"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto 6"
+                />
+            <TextView
+                android:id="@+id/ps6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    //Grid 3
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+        <LinearLayout
+            android:id="@+id/vs7"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_product"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto 7"
+                />
+            <TextView
+                android:id="@+id/ps7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vs8"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_product"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto 8"
+                />
+            <TextView
+                android:id="@+id/ps8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vs9"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hight_product"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto 9"
+                />
+            <TextView
+                android:id="@+id/ps9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="share"
+            />
+    </LinearLayout>
 
 
 

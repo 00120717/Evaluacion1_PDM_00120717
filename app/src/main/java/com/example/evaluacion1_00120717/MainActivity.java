@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.evaluacion1_00120717.Utils.AppConstants;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     View v1,v2,v3,v4,v5,v6,v7,v8,v9;
@@ -58,9 +60,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        Intent mIntent = new Intent(MainActivity.this,ShareActivity.class);
-
-
         switch (v.getId()){
             case R.id.vw1:
                 p1.setText(Integer.toString(Integer.parseInt(p1.getText().toString())+1));
@@ -89,9 +88,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 p9.setText(Integer.toString(Integer.parseInt(p9.getText().toString())+1));
                 break;
             case R.id.send:
-                mIntent.putExtra("key",user.getText());
-        }
+                Intent mIntent = new Intent(MainActivity.this,ShareActivity.class);
+                mIntent.putExtra(AppConstants.TEXTKEY_1,user.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_2,user.getText());
 
+                mIntent.putExtra(AppConstants.TEXTKEY_3,p1.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_4,p2.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_5,p3.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_6,p4.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_7,p5.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_8,p6.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_9,p7.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_10,p8.getText());
+                mIntent.putExtra(AppConstants.TEXTKEY_11,p9.getText());
+                startActivity(mIntent);
+        }
 
     }
 }
